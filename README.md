@@ -1,6 +1,6 @@
 SPA
 ===
 
-... under sonstruction ...
+... under construction ...
 
 http://storageperformanceanalyzer.github.io/SPA
