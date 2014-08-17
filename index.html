@@ -34,7 +34,7 @@
         <h2>
 <a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>Description</h2>
 
-<p>The Storage Performance Analyzer (SPA) is a software package containing the functionality for the systematic measurement, analysis and regression modeling specifically tailored for storage systems. SPA consists of a benchmark harness that coordinates and controls the execution of the included I/O benchmarks (FFSB and Filebench) and a tailored analysis library used to process and evaluate the collected measurements.</p>
+<p>The <strong>Storage Performance Analyzer (SPA)</strong> is a software package containing the functionality for the systematic measurement, analysis and regression modeling specifically tailored for storage systems. SPA consists of a benchmark harness that coordinates and controls the execution of the included I/O benchmarks (<a href="https://github.com/FFSB-prime">FFSB</a> and <a href="http://sourceforge.net/projects/filebench/">Filebench</a>) and a tailored analysis library used to process and evaluate the collected measurements.</p>
 
 <p>The benchmark harness supports the execution of benchmarks. Using a specification of the benchmark parameter space, which should be run on the remote machine, the software ensures that each of these configurations is executed automatically in a deterministic order. Furthermore, the benchmark harness supports synchronous measurements on co-located virtual machines in virtualized environments. The software ensures that the benchmark results are stored persistently in an SQLite database to provide easy access for further analysis.</p>
 
@@ -51,13 +51,7 @@
 <h3>
 <a name="contributors" class="anchor" href="#contributors"><span class="octicon octicon-link"></span></a>Contributors</h3>
 
-<pre><code>Dominik Bruhn dominik@dbruhn.de &lt;br&gt; 
-&lt;a href="http://sdq.ipd.kit.edu/people/axel_busch/"&gt; Axel Busch &lt;/a&gt;  &lt;br&gt; 
-&lt;a href="http://se.informatik.uni-wuerzburg.de/staff/kounev_samuel/"&gt; Samuel Kounev &lt;/a&gt; &lt;br&gt; 
-&lt;a href="http://sdq.ipd.kit.edu/people/qais_noorshams/"&gt;Qais Noorshams&lt;/a&gt; &lt;br&gt; 
-</code></pre>
-
-<p><a href="http://sdq.ipd.kit.edu/people/ralf_reussner/"> Ralf Reussner </a><br></p>
+<p>Dominik Bruhn <a href="mailto:dominik@dbruhn.de">dominik@dbruhn.de</a> <br><a href="http://sdq.ipd.kit.edu/people/axel_busch/"> Axel Busch </a>  <br><a href="http://se.informatik.uni-wuerzburg.de/staff/kounev_samuel/"> Samuel Kounev </a> <br><a href="http://sdq.ipd.kit.edu/people/qais_noorshams/">Qais Noorshams</a> <br><a href="http://sdq.ipd.kit.edu/people/ralf_reussner/"> Ralf Reussner </a><br></p>
 
 <h2>
 <a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
@@ -65,13 +59,16 @@
 <h3>
 <a name="controller-machine" class="anchor" href="#controller-machine"><span class="octicon octicon-link"></span></a>Controller Machine</h3>
 
-<pre><code>Java 6 or later, Apache Ant for compilation &lt;br&gt;
-Windows, Unix and Mac operating systems tested &lt;br&gt;
-R (http://r-project.org) &lt;br&gt;
-SQLite (http://sqlite.org) &lt;br&gt;
-</code></pre>
-
-<h3>
+<ul>
+<li>Java 6 or later, Apache Ant for compilation <br>
+</li>
+<li>Windows, Unix and Mac operating systems tested <br>
+</li>
+<li>R (<a href="http://r-project.org">http://r-project.org</a>) <br>
+</li>
+<li>SQLite (<a href="http://sqlite.org">http://sqlite.org</a>) <br>
+</li>
+</ul><h3>
 <a name="system-under-test" class="anchor" href="#system-under-test"><span class="octicon octicon-link"></span></a>System Under Test</h3>
 
 <pre><code>POSIX compatible operating system (tested on Linux) &lt;br&gt;
