@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+if [ "x$1" == "x" ]; then
+    echo "First parameter must be folder"
+    exit 3
+fi
+
+#find "$1" | grep ffsb_config | while read i; do
+cat /tmp/importParts | while read i; do
+    i=`dirname "$i"`
+    echo "======= IMPORTING $i ============="
+    ./ffsbImport -d qais.sqlite --ffsbconf "$i/ffsb_config" \
+    --ffsblog "$i/FFSB.log" --host "da_prktlin1"
+done

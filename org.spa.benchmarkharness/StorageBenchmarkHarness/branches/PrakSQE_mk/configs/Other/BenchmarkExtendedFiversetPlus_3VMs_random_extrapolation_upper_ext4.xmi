@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?>
+<SBHC:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SBHC="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu" xsi:schemaLocation="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu ../StorageBenchmarkHarnessModel/model/SBHModel.ecore#//Configuration">
+  <experimentSetup identifier="Extrapolation on 3 VMs" repeatCount="5">
+    <experimentSeries identifier="Extra@3VM@prktlin1">
+      <independentVariableSpaceOfBenchmark xsi:type="SBHC:IndependentVariableSpaceOfFFSB" href="Repository.xmi#2012-08-14 Extendend Fiverset Plus@3VM Random Extrapolation Upper"/>
+      <independentVariableSpaceOfSut href="Repository.xmi#ext4 + NOOP &amp; CFQ"/>
+      <systemUnderTest href="Repository.xmi#da_prktlin1"/>
+    </experimentSeries>
+    <experimentSeries identifier="Extra@3VM@prktlin2">
+      <independentVariableSpaceOfBenchmark xsi:type="SBHC:IndependentVariableSpaceOfFFSB" href="Repository.xmi#2012-08-14 Extendend Fiverset Plus@3VM Random Extrapolation Upper"/>
+      <independentVariableSpaceOfSut href="Repository.xmi#ext4 + NOOP &amp; CFQ"/>
+      <systemUnderTest href="Repository.xmi#da_zvm_1"/>
+    </experimentSeries>
+    <experimentSeries identifier="Extra@3VM@prktlin3">
+      <independentVariableSpaceOfBenchmark xsi:type="SBHC:IndependentVariableSpaceOfFFSB" href="Repository.xmi#2012-08-14 Extendend Fiverset Plus@3VM Random Extrapolation Upper"/>
+      <independentVariableSpaceOfSut href="Repository.xmi#ext4 + NOOP &amp; CFQ"/>
+      <systemUnderTest href="Repository.xmi#da_zvm_2"/>
+    </experimentSeries>
+   </experimentSetup>
+</SBHC:Configuration>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ASCII"?>
+<SBHC:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SBHC="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu" xmlns:SBHCO="Operations.Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu" xsi:schemaLocation="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu ../StorageBenchmarkHarnessModel/model/SBHModel.ecore#//Configuration Operations.Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu ../StorageBenchmarkHarnessModel/model/SBHModel.ecore#//Configuration/Operations">
+  <experimentSetup identifier="exz100">
+    <experimentSeries independentVariableSpaceOfBenchmark="fb0" independentVariableSpaceOfSut="ivsosutz10" systemUnderTest="z100" identifier="exsz100"/>
+    <experimentSeries independentVariableSpaceOfBenchmark="ffsb1" independentVariableSpaceOfSut="ivsosutz10" systemUnderTest="z101" identifier="exsz101"/>
+  </experimentSetup>
+  <systemUnderTestRepository>
+    <systemsUnderTest identifier="z100" ip="141.3.52.138" user="mkaufmann" keyFile="C:\Users\michael\.ssh\id_rsa"/>
+    <systemsUnderTest identifier="z101" ip="141.3.52.139" user="mkaufmann" keyFile="C:\Users\michael\.ssh\id_rsa"/>
+  </systemUnderTestRepository>
+  <independentVariableSpaceRepository>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfSut" identifier="ivsosutz10">
+      <fileSystem>ext4</fileSystem>
+      <scheduler>CFQ</scheduler>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfFilebench" identifier="fb0" name="filebench0">
+      <threads threadName="threadfb0">
+        <memsize>10m</memsize>
+        <operations xsi:type="SBHCO:Read" operationName="read1" flowOpName="read" filesetname="fileset0">
+          <iosize>2k</iosize>
+          <directio>1</directio>
+          <random>1</random>
+          <iters>1</iters>
+        </operations>
+        <instances>1</instances>
+      </threads>
+      <filesets filesetName="fileset0">
+        <directory>\mnt\mkaufmann</directory>
+        <meanDirWidth>2</meanDirWidth>
+        <files>2</files>
+        <meanFileSize>1g</meanFileSize>
+        <prealloc>100</prealloc>
+      </filesets>
+      <runTime>10</runTime>
+      <runTime>20</runTime>
+      <warmupTime>20</warmupTime>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfFilebench" identifier="fb1" name="filebench1">
+      <threads threadName="threadfb1">
+        <memsize>10m</memsize>
+        <operations xsi:type="SBHCO:Read" operationName="read1" flowOpName="read" filesetname="fileset1">
+          <iosize>2k</iosize>
+          <directio>1</directio>
+          <random>1</random>
+          <iters>1</iters>
+        </operations>
+        <instances>1</instances>
+      </threads>
+      <filesets>
+        <directory>\tmp</directory>
+        <meanDirWidth>2</meanDirWidth>
+        <files>2</files>
+        <meanFileSize>1g</meanFileSize>
+        <prealloc>100</prealloc>
+      </filesets>
+      <runTime>11</runTime>
+      <runTime>21</runTime>
+      <warmupTime>11</warmupTime>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfFFSB" identifier="ffsb1">
+      <readBlockSize>512</readBlockSize>
+      <writeBlockSize>512</writeBlockSize>
+      <readPercentage>10</readPercentage>
+      <filesetSize>1024</filesetSize>
+      <sequentialRead>false</sequentialRead>
+      <sequentialWrite>false</sequentialWrite>
+      <writeFsync>false</writeFsync>
+      <threadCount>1</threadCount>
+      <runTime>30</runTime>
+      <warmUpTime>20</warmUpTime>
+      <fileSize>512</fileSize>
+      <fileSize>1024</fileSize>
+      <opsPerFile>256</opsPerFile>
+      <directIO>true</directIO>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfFilebench" identifier="fb2" name="filebench2">
+      <threads threadName="threadfb2">
+        <memsize>10m</memsize>
+        <operations xsi:type="SBHCO:Read" operationName="read1" flowOpName="read" filesetname="fileset2">
+          <iosize>2k</iosize>
+          <directio>1</directio>
+          <random>1</random>
+          <iters>1</iters>
+        </operations>
+        <instances>1</instances>
+      </threads>
+      <filesets filesetName="fileset2">
+        <directory>\tmp</directory>
+        <meanDirWidth>2</meanDirWidth>
+        <files>2</files>
+        <meanFileSize>1g</meanFileSize>
+        <prealloc>100</prealloc>
+      </filesets>
+      <runTime>12</runTime>
+      <runTime>22</runTime>
+      <warmupTime>12</warmupTime>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfFilebench" identifier="fb3" name="filebench3">
+      <threads threadName="threadfb3">
+        <memsize>10m</memsize>
+        <operations xsi:type="SBHCO:Read" operationName="read1" flowOpName="read" filesetname="fileset3">
+          <iosize>2k</iosize>
+          <directio>1</directio>
+          <random>1</random>
+          <iters>1</iters>
+        </operations>
+        <instances>1</instances>
+      </threads>
+      <filesets filesetName="fileset3">
+        <directory>\tmp</directory>
+        <meanDirWidth>2</meanDirWidth>
+        <files>2</files>
+        <meanFileSize>1g</meanFileSize>
+        <prealloc>100</prealloc>
+      </filesets>
+      <runTime>13</runTime>
+      <runTime>23</runTime>
+      <warmupTime>13</warmupTime>
+    </independentVariableSpaces>
+  </independentVariableSpaceRepository>
+</SBHC:Configuration>

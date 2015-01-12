@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SBHC:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SBHC="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu" xmlns:SBHCO="Operations.Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu">
+  <experimentSetup identifier="Example_Mailserver_on_one_host">
+    <experimentSeries independentVariableSpaceOfBenchmark="FilebenchMailserver" independentVariableSpaceOfSut="NOOP+ext4" systemUnderTest="SUT_example" identifier="FB_run"/>
+  </experimentSetup>
+  <systemUnderTestRepository>
+    <systemsUnderTest identifier="SUT_example" ip="IP.IP.IP.IP" port="0" user="username" keyFile="/Path/RSA_KEY_FILE"/>
+  </systemUnderTestRepository>
+  <independentVariableSpaceRepository>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfSut" identifier="NOOP+ext4">
+      <fileSystem>ext4</fileSystem>
+      <scheduler>NOOP</scheduler>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfFilebench" identifier="FilebenchMailserver" name="mailserver">
+      <threads threadName="filereaderthread">
+        <memsize>10m</memsize>
+        <operations xsi:type="SBHCO:DeleteFile" operationName="deletefile1" flowOpName="deletefile" warmupOperation="false" filesetname="bigfileset"/>
+        <operations xsi:type="SBHCO:CreateFile" operationName="createfile2" flowOpName="createfile" warmupOperation="false" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:AppendFileRand" operationName="appendfilerand2" flowOpName="appendfilerand" warmupOperation="false" filesetname="" fd="1">
+          <iosize>32k</iosize>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile2" flowOpName="closefile" warmupOperation="false" fd="1"/>
+        <operations xsi:type="SBHCO:OpenFile" operationName="openfile3" flowOpName="openfile" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:ReadWholeFile" operationName="readfile3" flowOpName="readwholefile" fileset="" fd="1">
+          <iosize>1m</iosize>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile3" flowOpName="closefile" fd="1"/>
+        <operations xsi:type="SBHCO:OpenFile" operationName="openfile4" flowOpName="openfile" warmupOperation="false" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:AppendFileRand" operationName="appendfilerand4" flowOpName="appendfilerand" warmupOperation="false" filesetname="" fd="1">
+          <iosize>32k</iosize>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile4" flowOpName="closefile" warmupOperation="false" fd="1"/>
+        <operations xsi:type="SBHCO:OpenFile" operationName="openfile5" flowOpName="openfile" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:ReadWholeFile" operationName="readfile5" flowOpName="readwholefile" fileset="" fd="1">
+          <iosize>1m</iosize>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile5" flowOpName="closefile" fd="1"/>
+        <instances>16</instances>
+      </threads>
+      <filesets filesetName="bigfileset">
+        <directory>/mailBigfileset</directory>
+        <meanDirWidth>1000000</meanDirWidth>
+        <files>50000</files>
+        <meanFileSize>16k</meanFileSize>
+        <prealloc>80</prealloc>
+      </filesets>
+      <runTime>300</runTime>
+      <warmupTime>60</warmupTime>
+    </independentVariableSpaces>
+  </independentVariableSpaceRepository>
+</SBHC:Configuration>

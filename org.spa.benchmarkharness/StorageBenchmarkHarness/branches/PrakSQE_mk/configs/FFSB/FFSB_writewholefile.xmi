@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SBHC:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SBHC="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu">
+  <experimentSetup identifier="FFSB" repeatCount="19">
+    <experimentSeries independentVariableSpaceOfBenchmark="ffsb1" independentVariableSpaceOfSut="FFSB(NOOP+ext4)" IndependentVariablesOfMonitor="blktrace1" systemUnderTest="z10" identifier="FFSB1"/>
+  </experimentSetup>
+  <systemUnderTestRepository>
+    <systemsUnderTest identifier="z10" ip="141.3.52.121" user="abusch" keyFile="/Users/axelbusch/.ssh/id_rsa"/>
+  </systemUnderTestRepository>
+  <independentVariableSpaceRepository>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfSut" identifier="FFSB(NOOP+ext4)">
+      <fileSystem>ext4</fileSystem>
+      <scheduler>NOOP</scheduler>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfFFSB" identifier="ffsb1">
+      <readBlockSize>4096</readBlockSize>
+      <writeBlockSize>161280</writeBlockSize>
+      <readPercentage>2</readPercentage>
+      <filesetSize>70</filesetSize>
+      <sequentialRead>true</sequentialRead>
+      <sequentialWrite>true</sequentialWrite>
+      <writeFsync>false</writeFsync>
+      <threadCount>50</threadCount>
+      <runTime>120</runTime>
+      <warmUpTime>60</warmUpTime>
+      <fileSize>158</fileSize>
+      <opsPerFile>1</opsPerFile>
+      <directIO>true</directIO>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariablesOfBlktrace" identifier="blktrace1" bufferSize="999" numberOfBuffers="30" targetDevice="/dev/sda" logFilePrefix="/FFSBLogs/" avgRequestSize="false" requestMix="false" accessPattern="false" patternWindowSize="20" opsPerFile="false" opsWindowSize="20"/>
+  </independentVariableSpaceRepository>
+</SBHC:Configuration>

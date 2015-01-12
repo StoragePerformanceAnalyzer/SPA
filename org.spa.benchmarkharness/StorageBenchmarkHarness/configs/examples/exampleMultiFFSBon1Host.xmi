@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SBHC:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SBHC="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu">
+  <experimentSetup identifier="Example_FFSB_on_one_host">
+    <experimentSeries independentVariableSpaceOfBenchmark="ffsb_config" independentVariableSpaceOfSut="NOOP+ext4" systemUnderTest="SUT_example" identifier="FFSB_run"/>
+  </experimentSetup>
+  <systemUnderTestRepository>
+    <systemsUnderTest identifier="SUT_example" ip="IP.IP.IP.IP" port="0" user="username" keyFile="/Path/RSA_KEY_FILE"/>
+  </systemUnderTestRepository>
+  <independentVariableSpaceRepository>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfSut" identifier="NOOP+ext4">
+      <fileSystem>ext4</fileSystem>
+      <scheduler>NOOP</scheduler>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfFFSB" identifier="ffsb_config">
+      <readBlockSize>4096</readBlockSize>
+      <writeBlockSize>4096</writeBlockSize>
+      <readPercentage>100</readPercentage>
+      <filesetSize>1024</filesetSize>
+      <sequentialRead>false</sequentialRead>
+      <sequentialWrite>false</sequentialWrite>
+      <writeFsync>false</writeFsync>
+      <threadCount>10</threadCount>
+      <threadCount>20</threadCount>
+      <threadCount>30</threadCount>
+      <runTime>60</runTime>
+      <warmUpTime>30</warmUpTime>
+      <fileSize>16384</fileSize>
+      <opsPerFile>256</opsPerFile>
+      <directIO>true</directIO>
+    </independentVariableSpaces>
+  </independentVariableSpaceRepository>
+</SBHC:Configuration>

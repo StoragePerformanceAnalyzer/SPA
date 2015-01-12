@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/StorageBenchmarkHarnessModel/src" editDirectory="/StorageBenchmarkHarnessModel.edit/src"
+    editorDirectory="/StorageBenchmarkHarnessModel.editor/src" modelPluginID="StorageBenchmarkHarnessModel"
+    modelName="SBHModel" modelPluginClass="" editPluginClass="edu.kit.sdq.storagebenchmarkharness.SBHModel.provider.SBHModelEditPlugin"
+    editorPluginClass="edu.kit.sdq.storagebenchmarkharness.SBHModel.presentation.SBHModelEditorPlugin"
+    updateClasspath="false" rootExtendsInterface="" rootImplementsInterface="" suppressEMFTypes="true"
+    suppressEMFMetaData="true" suppressEMFModelTags="true" suppressInterfaces="true"
+    testSuiteClass="edu.kit.sdq.storagebenchmarkharness.SBHModel.tests.SBHModelAllTests"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    editPluginID="StorageBenchmarkHarnessModel.edit" editorPluginID="StorageBenchmarkHarnessModel.editor"
+    language="" interfaceNamePattern="" classNamePattern="">
+  <foreignModel>SBHModel.ecore</foreignModel>
+  <genPackages prefix="SBHModel" basePackage="edu.kit.sdq.storagebenchmarkharness"
+      disposableProviderFactory="true" ecorePackage="SBHModel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="SBHModel.ecore#//FileSystem">
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//FileSystem/ext4"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//FileSystem/XFS"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//FileSystem/BTRFS"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//FileSystem/ext3"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="SBHModel.ecore#//Scheduler">
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Scheduler/NOOP"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Scheduler/CFQ"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Scheduler/DEADLINE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="SBHModel.ecore#//Metric">
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Metric/responseTime"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Metric/throughput"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Metric/operations"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Metric/requestSize"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Metric/access"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Metric/requestMix"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Metric/filesetSize"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Metric/filesize"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Metric/threads"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Metric/opsPerFile"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Metric/queueDepth"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Metric/mergesPerSec"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Metric/serviceTime"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="SBHModel.ecore#//Type">
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Type/mean"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Type/stdDev"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Type/absolute"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Type/pattern"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Type/relation"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Type/singleValue"/>
+      <genEnumLiterals ecoreEnumLiteral="SBHModel.ecore#//Type/percentage"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="SBHModel.ecore#//File"/>
+    <genDataTypes ecoreDataType="SBHModel.ecore#//Timestamp"/>
+    <genClasses ecoreClass="SBHModel.ecore#//IndependentVariablesOfSut">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfSut/fileSystem"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfSut/scheduler"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SBHModel.ecore#//IndependentVariablesOfBenchmark"/>
+    <genClasses ecoreClass="SBHModel.ecore#//IndependentVariablesOfFFSB">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/readPercentage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/blockSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/writeBlockSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/readBlockSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/filesetSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/sequentialAccess"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/sequentialRead"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/sequentialWrite"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/writeFsync"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/threadCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/runTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/warmUpTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/fileSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/opsPerFile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/directIO"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/opsPerFileRead"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/opsPerFileWrite"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFFSB/opDelay"/>
+    </genClasses>
+    <genClasses ecoreClass="SBHModel.ecore#//IndependentVariablesOfPostmark">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfPostmark/applicationName"/>
+    </genClasses>
+    <genClasses ecoreClass="SBHModel.ecore#//IndependentVariablesOfFilebench">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFilebench/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SBHModel.ecore#//IndependentVariablesOfFilebench/threads"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SBHModel.ecore#//IndependentVariablesOfFilebench/filesets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFilebench/runTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFilebench/warmupTime"/>
+    </genClasses>
+    <genClasses ecoreClass="SBHModel.ecore#//Thread">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Thread/threadName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Thread/memsize"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SBHModel.ecore#//Thread/operations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Thread/instances"/>
+    </genClasses>
+    <genClasses ecoreClass="SBHModel.ecore#//Fileset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Fileset/filesetName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Fileset/directory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Fileset/meanDirWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Fileset/files"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Fileset/meanFileSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Fileset/prealloc"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SBHModel.ecore#//IndependentVariablesOfMonitor"/>
+    <genClasses ecoreClass="SBHModel.ecore#//IndependentVariablesOfBlktrace">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfBlktrace/bufferSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfBlktrace/numberOfBuffers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfBlktrace/targetDevice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfBlktrace/logFilePrefix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfBlktrace/avgRequestSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfBlktrace/requestMix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfBlktrace/accessPattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfBlktrace/visualizeAccessPattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfBlktrace/patternWindowSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfBlktrace/opsPerFile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfBlktrace/opsWindowSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfBlktrace/recordQ2c"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfBlktrace/activeQueueDepth"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SBHModel.ecore#//DependentVariables">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//DependentVariables/benchmarkPrefix"/>
+      <genFeatures notify="false" createChild="false" propertyCategory="" propertySortChoices="true"
+          ecoreFeature="ecore:EReference SBHModel.ecore#//DependentVariables/values"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SBHModel.ecore#//DependentVariablesValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//DependentVariablesValue/operation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//DependentVariablesValue/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//DependentVariablesValue/operationMetric"/>
+    </genClasses>
+    <genClasses ecoreClass="SBHModel.ecore#//DependentVariablesValueSingle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//DependentVariablesValueSingle/timestamp"/>
+    </genClasses>
+    <genClasses ecoreClass="SBHModel.ecore#//DependentVariablesValueComposite">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//DependentVariablesValueComposite/type"/>
+    </genClasses>
+    <genClasses ecoreClass="SBHModel.ecore#//IndependentVariablesOfFilesetMonitor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFilesetMonitor/interval"/>
+    </genClasses>
+    <genClasses ecoreClass="SBHModel.ecore#//IndependentVariablesOfFilesizeMonitor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfFilesizeMonitor/interval"/>
+    </genClasses>
+    <genClasses ecoreClass="SBHModel.ecore#//IndependentVariablesOfThreadsMonitor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfThreadsMonitor/interval"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfThreadsMonitor/benchmarkPrefix"/>
+    </genClasses>
+    <genClasses ecoreClass="SBHModel.ecore#//IndependentVariablesOfIostatMonitor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfIostatMonitor/interval"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfIostatMonitor/LogFilePrefix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//IndependentVariablesOfIostatMonitor/deviceName"/>
+    </genClasses>
+    <nestedGenPackages prefix="Configuration" basePackage="edu.kit.sdq.storagebenchmarkharness.SBHModel"
+        disposableProviderFactory="true" ecorePackage="SBHModel.ecore#//Configuration">
+      <genClasses ecoreClass="SBHModel.ecore#//Configuration/Configuration">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SBHModel.ecore#//Configuration/Configuration/experimentSetup"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SBHModel.ecore#//Configuration/Configuration/systemUnderTestRepository"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SBHModel.ecore#//Configuration/Configuration/independentVariableSpaceRepository"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Configuration/SystemUnderTest">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/SystemUnderTest/identifier"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/SystemUnderTest/ip"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/SystemUnderTest/port"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/SystemUnderTest/user"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/SystemUnderTest/keyFile"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Configuration/IndependentVariableSpaceOfSut">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfSut/fileSystem"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfSut/scheduler"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="SBHModel.ecore#//Configuration/IndependentVariableSpaceOfBenchmark">
+        <genTypeParameters ecoreTypeParameter="SBHModel.ecore#//Configuration/IndependentVariableSpaceOfBenchmark/Experiment"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/blockSize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/readBlockSize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/writeBlockSize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/readPercentage"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/filesetSize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/sequentialAccess"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/sequentialRead"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/sequentialWrite"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/writeFsync"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/threadCount"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/runTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/warmUpTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/fileSize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/opsPerFile"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/directIO"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/opsPerFileRead"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/opsPerFileWrite"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFFSB/opDelay"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Configuration/IndependentVariableSpaceOfPostmark">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfPostmark/applicationName"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="SBHModel.ecore#//Configuration/IndependentVariableSpace">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpace/identifier"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="SBHModel.ecore#//Configuration/ExperimentSeries">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference SBHModel.ecore#//Configuration/ExperimentSeries/independentVariableSpaceOfBenchmark"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference SBHModel.ecore#//Configuration/ExperimentSeries/independentVariableSpaceOfSut"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference SBHModel.ecore#//Configuration/ExperimentSeries/IndependentVariablesOfMonitor"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference SBHModel.ecore#//Configuration/ExperimentSeries/systemUnderTest"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/ExperimentSeries/identifier"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Configuration/ExperimentSetup">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/ExperimentSetup/identifier"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SBHModel.ecore#//Configuration/ExperimentSetup/experimentSeries"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/ExperimentSetup/repeatCount"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/ExperimentSetup/repeatWarmup"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Configuration/SystemUnderTestRepository">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SBHModel.ecore#//Configuration/SystemUnderTestRepository/systemsUnderTest"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Configuration/IndependentVariableSpaceRepository">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SBHModel.ecore#//Configuration/IndependentVariableSpaceRepository/independentVariableSpaces"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFilebench">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFilebench/threads"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFilebench/filesets"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFilebench/runTime"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFilebench/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariableSpaceOfFilebench/warmupTime"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Configuration/Thread">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Thread/memsize"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SBHModel.ecore#//Configuration/Thread/operations"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Thread/instances"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Thread/threadName"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Configuration/Fileset">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Fileset/directory"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Fileset/meanDirWidth"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Fileset/files"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Fileset/meanFileSize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Fileset/prealloc"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Fileset/filesetName"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="SBHModel.ecore#//Configuration/IndependentVariablesOfMonitor">
+        <genTypeParameters ecoreTypeParameter="SBHModel.ecore#//Configuration/IndependentVariablesOfMonitor/Experiment"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Configuration/IndependentVariablesOfBlktrace">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfBlktrace/bufferSize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfBlktrace/numberOfBuffers"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfBlktrace/targetDevice"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfBlktrace/logFilePrefix"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfBlktrace/avgRequestSize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfBlktrace/requestMix"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfBlktrace/accessPattern"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfBlktrace/visualizeAccessPattern"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfBlktrace/patternWindowSize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfBlktrace/opsPerFile"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfBlktrace/opsWindowSize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfBlktrace/recordQ2c"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfBlktrace/activeQueueDepth"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Configuration/IndependentVariablesOfFilesetMonitor">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfFilesetMonitor/interval"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Configuration/IndependentVariablesOfFilesizeMonitor">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfFilesizeMonitor/interval"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Configuration/IndependentVariablesOfThreadsMonitor">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfThreadsMonitor/interval"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/IndependentVariablesOfThreadsMonitor/benchmarkPrefix"/>
+      </genClasses>
+      <nestedGenPackages prefix="Operations" basePackage="edu.kit.sdq.storagebenchmarkharness.SBHModel.Configuration"
+          disposableProviderFactory="true" ecorePackage="SBHModel.ecore#//Configuration/Operations">
+        <genClasses image="false" ecoreClass="SBHModel.ecore#//Configuration/Operations/Operation">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Operation/operationName"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Operation/flowOpName"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Operation/warmupOperation"/>
+        </genClasses>
+        <genClasses ecoreClass="SBHModel.ecore#//Configuration/Operations/Read">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Read/filesetname"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Read/iosize"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Read/directio"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Read/random"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Read/iters"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Read/fd"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Read/dsync"/>
+        </genClasses>
+        <genClasses ecoreClass="SBHModel.ecore#//Configuration/Operations/CreateFile">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/CreateFile/filesetname"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/CreateFile/directio"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/CreateFile/fd"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/CreateFile/dsync"/>
+        </genClasses>
+        <genClasses ecoreClass="SBHModel.ecore#//Configuration/Operations/WriteHoleFile">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/WriteHoleFile/filesetname"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/WriteHoleFile/iosize"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/WriteHoleFile/iters"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/WriteHoleFile/workingset"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/WriteHoleFile/fd"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/WriteHoleFile/srcfd"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/WriteHoleFile/dsync"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/WriteHoleFile/directio"/>
+        </genClasses>
+        <genClasses ecoreClass="SBHModel.ecore#//Configuration/Operations/CloseFile">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/CloseFile/fd"/>
+        </genClasses>
+        <genClasses ecoreClass="SBHModel.ecore#//Configuration/Operations/OpenFile">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/OpenFile/filesetname"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/OpenFile/directio"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/OpenFile/fd"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/OpenFile/dsync"/>
+        </genClasses>
+        <genClasses ecoreClass="SBHModel.ecore#//Configuration/Operations/AppendFileRand">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/AppendFileRand/filesetname"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/AppendFileRand/iosize"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/AppendFileRand/iters"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/AppendFileRand/workingset"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/AppendFileRand/fd"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/AppendFileRand/dsync"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/AppendFileRand/directio"/>
+        </genClasses>
+        <genClasses ecoreClass="SBHModel.ecore#//Configuration/Operations/ReadWholeFile">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/ReadWholeFile/fileset"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/ReadWholeFile/iosize"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/ReadWholeFile/iters"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/ReadWholeFile/fd"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/ReadWholeFile/dsync"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/ReadWholeFile/directio"/>
+        </genClasses>
+        <genClasses ecoreClass="SBHModel.ecore#//Configuration/Operations/DeleteFile">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/DeleteFile/filesetname"/>
+        </genClasses>
+        <genClasses ecoreClass="SBHModel.ecore#//Configuration/Operations/StatFile">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/StatFile/filesetname"/>
+        </genClasses>
+        <genClasses ecoreClass="SBHModel.ecore#//Configuration/Operations/Fsync">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Fsync/fd"/>
+        </genClasses>
+        <genClasses ecoreClass="SBHModel.ecore#//Configuration/Operations/Write">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Write/filesetname"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Write/iosize"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Write/directio"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Write/random"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Write/iters"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Write/fd"/>
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Write/dsync"/>
+        </genClasses>
+        <genClasses ecoreClass="SBHModel.ecore#//Configuration/Operations/Delay">
+          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Configuration/Operations/Delay/value"/>
+        </genClasses>
+      </nestedGenPackages>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Operations" basePackage="edu.kit.sdq.storagebenchmarkharness.SBHModel"
+        disposableProviderFactory="true" ecorePackage="SBHModel.ecore#//Operations">
+      <genClasses image="false" ecoreClass="SBHModel.ecore#//Operations/Operation">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Operation/operationName"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Operation/flowOpName"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Operation/warmupOperation"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Operations/Read">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Read/filesetname"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Read/iosize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Read/directio"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Read/random"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Read/iters"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Read/fd"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Read/dsync"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Operations/CreateFile">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/CreateFile/filesetname"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/CreateFile/directio"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/CreateFile/fd"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/CreateFile/dsync"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Operations/WriteHoleFile">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/WriteHoleFile/filesetname"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/WriteHoleFile/iosize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/WriteHoleFile/iters"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/WriteHoleFile/workingset"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/WriteHoleFile/fd"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/WriteHoleFile/srcfd"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/WriteHoleFile/dsync"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/WriteHoleFile/directio"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Operations/CloseFile">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/CloseFile/fd"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Operations/OpenFile">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/OpenFile/filesetname"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/OpenFile/directio"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/OpenFile/fd"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/OpenFile/dsync"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Operations/AppendFileRand">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/AppendFileRand/filesetname"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/AppendFileRand/iosize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/AppendFileRand/iters"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/AppendFileRand/workingset"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/AppendFileRand/fd"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/AppendFileRand/dsync"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/AppendFileRand/directio"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Operations/ReadWholeFile">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/ReadWholeFile/fileset"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/ReadWholeFile/iosize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/ReadWholeFile/iters"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/ReadWholeFile/fd"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/ReadWholeFile/dsync"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/ReadWholeFile/directio"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Operations/DeleteFile">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/DeleteFile/filesetname"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Operations/StatFile">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/StatFile/filesetname"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Operations/Fsync">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Fsync/fd"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Operations/Write">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Write/filesetname"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Write/iosize"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Write/directio"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Write/random"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Write/iters"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Write/fd"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Write/dsync"/>
+      </genClasses>
+      <genClasses ecoreClass="SBHModel.ecore#//Operations/Delay">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SBHModel.ecore#//Operations/Delay/value"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

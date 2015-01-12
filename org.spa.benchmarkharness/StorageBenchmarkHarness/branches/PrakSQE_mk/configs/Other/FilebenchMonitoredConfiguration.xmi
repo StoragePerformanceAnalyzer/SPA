@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SBHC:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SBHC="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu" xmlns:SBHCO="Operations.Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu">
+  <experimentSetup identifier="Filebench Demo">
+    <experimentSeries independentVariableSpaceOfBenchmark="FilebenchDemo" independentVariableSpaceOfSut="FilebenchDemo(NOOP+ext4)" IndependentVariablesOfMonitor="blktrace1" systemUnderTest="z10" identifier="Filebench Demo on z10"/>
+  </experimentSetup>
+  <systemUnderTestRepository>
+    <systemsUnderTest identifier="z10" ip="localhost" port="10022" user="abusch" keyFile="/Users/axelbusch/.ssh/id_rsa"/>
+  </systemUnderTestRepository>
+  <independentVariableSpaceRepository>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfFilebench" identifier="FilebenchDemo">
+      <threads>
+        <memsize>10m</memsize>
+        <operations xsi:type="SBHCO:Read" operationName="read1" flowOpName="read" filesetname="fileset1">
+          <iosize>2k</iosize>
+          <directio>1</directio>
+          <random>1</random>
+          <iters>1</iters>
+        </operations>
+        <instances>1</instances>
+      </threads>
+      <filesets>
+        <directory>/tmp</directory>
+        <meanDirWidth>2</meanDirWidth>
+        <files>2</files>
+        <meanFileSize>1g</meanFileSize>
+        <prealloc>100</prealloc>
+      </filesets>
+      <runTime>10</runTime>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfSut" identifier="FilebenchDemo(NOOP+ext4)">
+      <fileSystem>ext4</fileSystem>
+      <scheduler>NOOP</scheduler>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariablesOfBlktrace" identifier="blktrace1" bufferSize="999" numberOfBuffers="30" targetDevice="/dev/sda" logFilePrefix="/tmp/"/>
+  </independentVariableSpaceRepository>
+</SBHC:Configuration>

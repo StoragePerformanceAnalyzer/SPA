@@ -1,0 +1,49 @@
+This software uses the following libraries:
+
+1. Caret
+    - Available at: http://cran.r-project.org/web/packages/caret/index.html
+    - Licensed under GPL-2 http://cran.r-project.org/web/licenses/GPL-2
+
+2. Earth
+    - Available at: http://cran.r-project.org/web/packages/earth/index.html
+    - Licensed under GPL-3 http://cran.r-project.org/web/licenses/GPL-3
+
+3. data.table
+    - Available at: http://cran.r-project.org/web/packages/data.table/index.html
+    - Licensed under GPL-2 and GPL-3
+
+4. ggplot2
+    - Available at: http://cran.r-project.org/web/packages/ggplot2/index.html
+    - Licensed under GPL-2 http://cran.r-project.org/web/licenses/GPL-2
+
+5. forecast:
+    - Available at: http://cran.r-project.org/web/packages/forecast/index.html
+    - Licensed under GPL-2 and GPL-3
+
+6. doMC:
+    - Available at: http://cran.r-project.org/web/packages/doMC/index.html
+    - Licensed under GPL-2 http://cran.r-project.org/web/licenses/GPL-2
+
+7. rpart:
+    - Available at: http://cran.r-project.org/web/packages/rpart/index.html
+    - Licensed under GPL-2 and GPL-3
+
+8. party:
+    - Available at: http://cran.r-project.org/web/packages/party/index.html
+    - Licensed under GPL-2 http://cran.r-project.org/web/licenses/GPL-2
+
+9. partykit:
+    - Available at: http://cran.r-project.org/web/packages/partykit/index.html
+    - Licensed under GPL-2 http://cran.r-project.org/web/licenses/GPL-2
+
+10. Cubist:
+    - Available at: http://cran.r-project.org/web/packages/Cubist/index.html
+    - Licensed under GPL-3
+
+11. xtable:
+    - Available at: http://cran.r-project.org/web/packages/xtable/index.html
+    - Licensed under GPL-2 and GPL-3
+    
+12. xtable:
+    - Available at: http://cran.r-project.org/web/packages/filehash/index.html
+    - Licensed under GPL-2 and GPL-3

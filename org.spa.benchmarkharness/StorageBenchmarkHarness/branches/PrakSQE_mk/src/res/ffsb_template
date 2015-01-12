@@ -1,0 +1,49 @@
+directio        = {{DIRECTIO}}
+time            = {{TIME}}
+
+[filesystem]
+        location        = {{TARGET}}
+       
+        num_dirs        = 100
+        min_filesize = {{MINFILESIZE}}
+    	max_filesize = {{MAXFILESIZE}}
+
+		num_files = {{NUMFILES}}
+		
+		reuse           = {{REUSE}}
+[end]
+
+[threadgroup]
+        num_threads     = {{NUM_THREADS}}
+
+        #append_weight          = 1
+        #append_fsync_weight    = 1
+        #stat_weight            = 1
+        write_weight            = {{WRITE_WEIGHT}}
+        write_fsync_weight      = {{WRITE_FSYNC_WEIGHT}}
+        read_weight             = {{READ_WEIGHT}}
+        #create_weight          = 1
+        #create_fsync_weight    = 1
+        #delete_weight          = 1
+        #readall_weight         = 1
+        #writeall_weight        = 1
+        #writeall_fsync_weight  = 1
+        #open_close_weight      = 1
+
+        read_random = {{READ_RANDOM}}
+        write_random = {{WRITE_RANDOM}}
+
+        write_size = {{WRITE_SIZE}}
+        write_blocksize = {{WRITE_BLOCKSIZE}}
+        read_size = {{READ_SIZE}}
+        read_blocksize = {{READ_BLOCKSIZE}}
+
+        op_delay        = {{OP_DELAY}}
+
+        [stats]
+                enable_stats    = {{ENABLESTATS}}
+                enable_range    = 0
+
+                msec_range      0.00 10000.0
+        [end]
+[end]

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="tests"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="libs/guava-11.0.1/guava-11.0.1.jar" sourcepath="libs/guava-11.0.1/guava-11.0.1-sources.jar"/>
+	<classpathentry kind="lib" path="libs/sqlite4java-213/sqlite4java.jar" sourcepath="libs/sqlite4java-213/sqlite4java-src.zip"/>
+	<classpathentry kind="lib" path="libs/logback-0.9.21/logback-classic-0.9.21.jar" sourcepath="libs/logback-0.9.21/logback-classic-0.9.21-sources.jar"/>
+	<classpathentry kind="lib" path="libs/logback-0.9.21/logback-core-0.9.21.jar" sourcepath="libs/logback-0.9.21/logback-core-0.9.21-sources.jar"/>
+	<classpathentry kind="lib" path="libs/slf4j-1.6.0/slf4j-api-1.6.0.jar" sourcepath="libs/slf4j-1.6.0/slf4j-api-1.6.0-sources.jar"/>
+	<classpathentry kind="lib" path="libs/jsch-0.1.45/dist/lib/jsch-20120123.jar" sourcepath="libs/jsch-0.1.45/src/main/java"/>
+	<classpathentry kind="lib" path="libs/eclipse-ocl/org.eclipse.ocl.ecore_3.2.0.v20120126-0656.jar"/>
+	<classpathentry kind="lib" path="libs/eclipse-ocl/org.eclipse.ocl_3.2.0.v20120130-1105.jar"/>
+	<classpathentry kind="lib" path="libs/eclipse-ocl/lpg.runtime.java_2.0.17.v201004271640.jar"/>
+	<classpathentry kind="lib" path="libs/junit-4.10/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="libs/JCommander/JCommander.20120328.jar" sourcepath="libs/JCommander/src/main/java"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/StorageBenchmarkHarnessModel"/>
+	<classpathentry kind="lib" path="libs/eclipse-emf/org.eclipse.emf.common_2.8.0.v20130125-0546.jar"/>
+	<classpathentry kind="lib" path="libs/eclipse-emf/org.eclipse.emf.ecore_2.8.3.v20130125-0546.jar"/>
+	<classpathentry kind="lib" path="libs/eclipse-emf/org.eclipse.emf.ecore.xmi_2.8.1.v20130125-0546.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

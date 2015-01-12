@@ -1,0 +1,49 @@
+directio        = 1
+time            = 60
+
+[filesystem]
+        location        = /mnt/noorsh/ffsb/983bd7d3-a8a1-4122-95e4-f90c0ad81d5a
+       
+        num_dirs        = 100
+        min_filesize = 16384k
+    	max_filesize = 16384k
+
+		num_files = 64
+		
+		reuse           = 1
+[end]
+
+[threadgroup]
+        num_threads     = 10
+
+        #append_weight          = 1
+        #append_fsync_weight    = 1
+        #stat_weight            = 1
+        write_weight            = 0
+        write_fsync_weight      = 0
+        read_weight             = 100
+        #create_weight          = 1
+        #create_fsync_weight    = 1
+        #delete_weight          = 1
+        #readall_weight         = 1
+        #writeall_weight        = 1
+        #writeall_fsync_weight  = 1
+        #open_close_weight      = 1
+
+        read_random = 1
+        write_random = 1
+
+        write_size = 1048576
+        write_blocksize = 4096
+        read_size = 1048576
+        read_blocksize = 4096
+
+        op_delay        = 0
+
+        [stats]
+                enable_stats    = 1
+                enable_range    = 0
+
+                msec_range      0.00 10000.0
+        [end]
+[end]

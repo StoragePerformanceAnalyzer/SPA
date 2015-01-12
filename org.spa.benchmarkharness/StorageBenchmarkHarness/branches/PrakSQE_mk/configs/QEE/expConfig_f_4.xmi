@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="ASCII"?>
+<SBHC:Configuration
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:SBHC="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu"
+    xsi:schemaLocation="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu ../../../StorageBenchmarkHarnessModel/model/SBHModel.ecore#//Configuration">
+  <experimentSetup
+      identifier="exp_f_4">
+    <experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize1K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_1"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread4_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_1"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize1K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_2"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread8_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_2"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize1K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_3"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread16_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_3"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize1K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_4"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread32_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_4"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize1K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_5"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread64_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_5"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize1K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_6"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread128_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_6"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize2K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_7"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread4_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_7"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize2K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_8"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread8_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_8"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize2K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_9"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread16_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_9"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize2K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_10"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread32_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_10"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize2K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_11"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread64_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_11"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize2K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_12"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread128_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_12"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize4K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_13"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread4_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_13"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize4K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_14"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread8_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_14"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize4K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_15"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread16_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_15"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize4K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_16"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread32_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_16"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize4K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_17"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread64_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_17"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize4K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_18"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread128_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_18"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize8K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_19"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread4_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_19"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize8K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_20"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread8_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_20"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize8K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_21"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread16_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_21"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize8K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_22"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread32_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_22"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize8K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_23"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread64_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_23"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize8K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_24"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread128_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_24"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize16K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_25"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread4_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_25"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize16K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_26"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread8_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_26"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize16K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_27"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread16_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_27"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize16K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_28"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread32_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_28"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize16K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_29"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread64_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_29"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize16K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_30"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread128_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_30"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize32K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_31"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread4_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_31"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize32K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_32"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread8_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_32"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize32K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_33"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread16_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_33"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize32K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_34"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread32_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_34"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize32K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_35"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread64_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_35"/>
+<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_rw_blocksize32K_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z100"
+	identifier="expSeriesZ100_36"/>
+	<experimentSeries
+	independentVariableSpaceOfBenchmark="ffsb_rand_rw_thread128_seq"
+	independentVariableSpaceOfSut="ivsosutz10"
+	systemUnderTest="z101"
+identifier="expSeriesZ101_36"/>
+
+
+  </experimentSetup>
+  <systemUnderTestRepository>
+    <systemsUnderTest
+        identifier="z100"
+        ip="141.3.52.138"
+        user="mkaufmann"
+        keyFile="C:\Users\michael\.ssh\id_rsa"/>
+    <systemsUnderTest
+        identifier="z101"
+        ip="141.3.52.139"
+        user="mkaufmann"
+        keyFile="C:\Users\michael\.ssh\id_rsa"/>
+  </systemUnderTestRepository>
+  <independentVariableSpaceRepository>
+    <independentVariableSpaces
+        xsi:type="SBHC:IndependentVariableSpaceOfSut"
+        identifier="ivsosutz10">
+      <fileSystem>ext4</fileSystem>
+      <scheduler>CFQ</scheduler>
+    </independentVariableSpaces>
+    <independentVariableSpaces
+	xsi:type="SBHC:IndependentVariableSpaceOfFFSB"
+	identifier="ffsb_rand_rw_rw_blocksize1K_seq">
+<blockSize>1024</blockSize>
+	<readPercentage>50</readPercentage>
+	<filesetSize>128</filesetSize>
+	<sequentialAccess>true</sequentialAccess>
+	<writeFsync>false</writeFsync>
+	<threadCount>1</threadCount>
+	<runTime>300</runTime>
+	<warmUpTime>60</warmUpTime>
+	<fileSize>65536</fileSize>
+	<opsPerFile>256</opsPerFile>
+	<directIO>true</directIO>
+</independentVariableSpaces>
+<independentVariableSpaces
+	xsi:type="SBHC:IndependentVariableSpaceOfFFSB"
+	identifier="ffsb_rand_rw_rw_blocksize2K_seq">
+<blockSize>2048</blockSize>
+	<readPercentage>50</readPercentage>
+	<filesetSize>128</filesetSize>
+	<sequentialAccess>true</sequentialAccess>
+	<writeFsync>false</writeFsync>
+	<threadCount>1</threadCount>
+	<runTime>300</runTime>
+	<warmUpTime>60</warmUpTime>
+	<fileSize>65536</fileSize>
+	<opsPerFile>256</opsPerFile>
+	<directIO>true</directIO>
+</independentVariableSpaces>
+<independentVariableSpaces
+	xsi:type="SBHC:IndependentVariableSpaceOfFFSB"
+	identifier="ffsb_rand_rw_rw_blocksize4K_seq">
+<blockSize>4096</blockSize>
+	<readPercentage>50</readPercentage>
+	<filesetSize>128</filesetSize>
+	<sequentialAccess>true</sequentialAccess>
+	<writeFsync>false</writeFsync>
+	<threadCount>1</threadCount>
+	<runTime>300</runTime>
+	<warmUpTime>60</warmUpTime>
+	<fileSize>65536</fileSize>
+	<opsPerFile>256</opsPerFile>
+	<directIO>true</directIO>
+</independentVariableSpaces>
+<independentVariableSpaces
+	xsi:type="SBHC:IndependentVariableSpaceOfFFSB"
+	identifier="ffsb_rand_rw_rw_blocksize8K_seq">
+<blockSize>8192</blockSize>
+	<readPercentage>50</readPercentage>
+	<filesetSize>128</filesetSize>
+	<sequentialAccess>true</sequentialAccess>
+	<writeFsync>false</writeFsync>
+	<threadCount>1</threadCount>
+	<runTime>300</runTime>
+	<warmUpTime>60</warmUpTime>
+	<fileSize>65536</fileSize>
+	<opsPerFile>256</opsPerFile>
+	<directIO>true</directIO>
+</independentVariableSpaces>
+<independentVariableSpaces
+	xsi:type="SBHC:IndependentVariableSpaceOfFFSB"
+	identifier="ffsb_rand_rw_rw_blocksize16K_seq">
+<blockSize>16384</blockSize>
+	<readPercentage>50</readPercentage>
+	<filesetSize>128</filesetSize>
+	<sequentialAccess>true</sequentialAccess>
+	<writeFsync>false</writeFsync>
+	<threadCount>1</threadCount>
+	<runTime>300</runTime>
+	<warmUpTime>60</warmUpTime>
+	<fileSize>65536</fileSize>
+	<opsPerFile>256</opsPerFile>
+	<directIO>true</directIO>
+</independentVariableSpaces>
+<independentVariableSpaces
+	xsi:type="SBHC:IndependentVariableSpaceOfFFSB"
+	identifier="ffsb_rand_rw_rw_blocksize32K_seq">
+<blockSize>32768</blockSize>
+	<readPercentage>50</readPercentage>
+	<filesetSize>128</filesetSize>
+	<sequentialAccess>true</sequentialAccess>
+	<writeFsync>false</writeFsync>
+	<threadCount>1</threadCount>
+	<runTime>300</runTime>
+	<warmUpTime>60</warmUpTime>
+	<fileSize>65536</fileSize>
+	<opsPerFile>256</opsPerFile>
+	<directIO>true</directIO>
+</independentVariableSpaces>
+
+<independentVariableSpaces
+	xsi:type="SBHC:IndependentVariableSpaceOfFFSB"
+	identifier="ffsb_rand_rw_thread4_seq">
+	<blockSize>4096</blockSize>
+	<readPercentage>50</readPercentage>
+	<filesetSize>128</filesetSize>
+	<sequentialAccess>true</sequentialAccess>
+	<writeFsync>false</writeFsync>
+	<threadCount>4</threadCount>
+	<runTime>300</runTime>
+	<warmUpTime>60</warmUpTime>
+	<fileSize>65536</fileSize>
+	<opsPerFile>256</opsPerFile>
+	<directIO>true</directIO>
+</independentVariableSpaces>
+<independentVariableSpaces
+	xsi:type="SBHC:IndependentVariableSpaceOfFFSB"
+	identifier="ffsb_rand_rw_thread8_seq">
+	<blockSize>4096</blockSize>
+	<readPercentage>50</readPercentage>
+	<filesetSize>128</filesetSize>
+	<sequentialAccess>true</sequentialAccess>
+	<writeFsync>false</writeFsync>
+	<threadCount>8</threadCount>
+	<runTime>300</runTime>
+	<warmUpTime>60</warmUpTime>
+	<fileSize>65536</fileSize>
+	<opsPerFile>256</opsPerFile>
+	<directIO>true</directIO>
+</independentVariableSpaces>
+<independentVariableSpaces
+	xsi:type="SBHC:IndependentVariableSpaceOfFFSB"
+	identifier="ffsb_rand_rw_thread16_seq">
+	<blockSize>4096</blockSize>
+	<readPercentage>50</readPercentage>
+	<filesetSize>128</filesetSize>
+	<sequentialAccess>true</sequentialAccess>
+	<writeFsync>false</writeFsync>
+	<threadCount>16</threadCount>
+	<runTime>300</runTime>
+	<warmUpTime>60</warmUpTime>
+	<fileSize>65536</fileSize>
+	<opsPerFile>256</opsPerFile>
+	<directIO>true</directIO>
+</independentVariableSpaces>
+<independentVariableSpaces
+	xsi:type="SBHC:IndependentVariableSpaceOfFFSB"
+	identifier="ffsb_rand_rw_thread32_seq">
+	<blockSize>4096</blockSize>
+	<readPercentage>50</readPercentage>
+	<filesetSize>128</filesetSize>
+	<sequentialAccess>true</sequentialAccess>
+	<writeFsync>false</writeFsync>
+	<threadCount>32</threadCount>
+	<runTime>300</runTime>
+	<warmUpTime>60</warmUpTime>
+	<fileSize>65536</fileSize>
+	<opsPerFile>256</opsPerFile>
+	<directIO>true</directIO>
+</independentVariableSpaces>
+<independentVariableSpaces
+	xsi:type="SBHC:IndependentVariableSpaceOfFFSB"
+	identifier="ffsb_rand_rw_thread64_seq">
+	<blockSize>4096</blockSize>
+	<readPercentage>50</readPercentage>
+	<filesetSize>128</filesetSize>
+	<sequentialAccess>true</sequentialAccess>
+	<writeFsync>false</writeFsync>
+	<threadCount>64</threadCount>
+	<runTime>300</runTime>
+	<warmUpTime>60</warmUpTime>
+	<fileSize>65536</fileSize>
+	<opsPerFile>256</opsPerFile>
+	<directIO>true</directIO>
+</independentVariableSpaces>
+<independentVariableSpaces
+	xsi:type="SBHC:IndependentVariableSpaceOfFFSB"
+	identifier="ffsb_rand_rw_thread128_seq">
+	<blockSize>4096</blockSize>
+	<readPercentage>50</readPercentage>
+	<filesetSize>128</filesetSize>
+	<sequentialAccess>true</sequentialAccess>
+	<writeFsync>false</writeFsync>
+	<threadCount>128</threadCount>
+	<runTime>300</runTime>
+	<warmUpTime>60</warmUpTime>
+	<fileSize>65536</fileSize>
+	<opsPerFile>256</opsPerFile>
+	<directIO>true</directIO>
+</independentVariableSpaces>
+
+
+  </independentVariableSpaceRepository>
+</SBHC:Configuration>

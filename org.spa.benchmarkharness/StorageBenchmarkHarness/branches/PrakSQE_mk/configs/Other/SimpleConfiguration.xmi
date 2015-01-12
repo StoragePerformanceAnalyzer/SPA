@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<SBHC:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SBHC="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu">
+  <experimentSetup identifier="Demonstration">
+    <experimentSeries independentVariableSpaceOfBenchmark="Demo_FFSB_Vars" independentVariableSpaceOfSut="Demo_SUT_Vars_(EXT4+NOOP)" systemUnderTest="Demo_Host" identifier="Demo on Host1"/>
+  </experimentSetup>
+  <systemUnderTestRepository>
+    <systemsUnderTest identifier="Demo_Host" ip="10.211.55.9" user="axel" keyFile="/Users/axelbusch/.ssh/id_rsa"/>
+  </systemUnderTestRepository>
+  <independentVariableSpaceRepository>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfSut" identifier="Demo_SUT_Vars_(EXT4+NOOP)">
+      <fileSystem>ext4</fileSystem>
+      <scheduler>NOOP</scheduler>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfFFSB" identifier="Demo_FFSB_Vars">
+      <blockSize>4096</blockSize>
+      <readPercentage>100</readPercentage>
+      <filesetSize>104</filesetSize>
+      <sequentialAccess>false</sequentialAccess>
+      <writeFsync>false</writeFsync>
+      <threadCount>2</threadCount>
+      <runTime>5</runTime>
+      <warmUpTime>5</warmUpTime>
+      <fileSize>104</fileSize>
+      <opsPerFile>5</opsPerFile>
+      <directIO>true</directIO>
+    </independentVariableSpaces>
+  </independentVariableSpaceRepository>
+</SBHC:Configuration>

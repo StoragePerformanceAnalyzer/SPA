@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<SBHC:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SBHC="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu" xsi:schemaLocation="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu ../StorageBenchmarkHarnessModel/model/SBHModel.ecore#//Configuration">
+  <experimentSetup identifier="LocalTest" repeatCount="3">
+    <experimentSeries identifier="test@localhost">
+      <independentVariableSpaceOfBenchmark xsi:type="SBHC:IndependentVariableSpaceOfFFSB" href="Repository.xmi#testFFSB"/>
+      <independentVariableSpaceOfSut href="Repository.xmi#default + NOOP"/>
+      <systemUnderTest href="Repository.xmi#testHost"/>
+    </experimentSeries>
+    <experimentSeries identifier="test@dombox">
+      <independentVariableSpaceOfBenchmark xsi:type="SBHC:IndependentVariableSpaceOfFFSB" href="Repository.xmi#testFFSB"/>
+      <independentVariableSpaceOfSut href="Repository.xmi#default + NOOP"/>
+      <systemUnderTest href="Repository.xmi#dombox"/>
+    </experimentSeries>
+  </experimentSetup>
+</SBHC:Configuration>

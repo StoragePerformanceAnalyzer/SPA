@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<SBHC:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SBHC="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu" xsi:schemaLocation="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu ../StorageBenchmarkHarnessModel/model/SBHModel.ecore#//Configuration">
+  <experimentSetup identifier="FiverSet@100Threads" repeatCount="10">
+    <experimentSeries identifier="Fiverset@100Threads on ZVM1">
+      <independentVariableSpaceOfBenchmark xsi:type="SBHC:IndependentVariableSpaceOfFFSB" href="Repository.xmi#2012-06-03 Fiverset@100Threads"/>
+      <independentVariableSpaceOfSut href="Repository.xmi#default + NOOP"/>
+      <systemUnderTest href="Repository.xmi#da_zvm_1"/>
+    </experimentSeries>
+  </experimentSetup>
+</SBHC:Configuration>

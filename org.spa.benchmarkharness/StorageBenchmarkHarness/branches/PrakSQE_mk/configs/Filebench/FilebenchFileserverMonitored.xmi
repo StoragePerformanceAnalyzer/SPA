@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SBHC:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SBHC="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu" xmlns:SBHCO="Operations.Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu">
+  <experimentSetup identifier="Filebench Fileserver" repeatCount="20" repeatWarmup="true">
+    <experimentSeries independentVariableSpaceOfBenchmark="FilebenchFileserver" independentVariableSpaceOfSut="Filebench(NOOP+ext4)" IndependentVariablesOfMonitor="filesetMonitor1 FilesizeMonitor1 ThreadsMonitor1 blktrace1" systemUnderTest="z10" identifier="Filebench Fileserver1"/>
+  </experimentSetup>
+  <systemUnderTestRepository>
+    <systemsUnderTest identifier="z10" ip="141.3.52.121" user="abusch" keyFile="/Users/axelbusch/.ssh/id_rsa"/>
+  </systemUnderTestRepository>
+  <independentVariableSpaceRepository>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfFilebench" identifier="FilebenchFileserver" name="fileserver">
+      <threads threadName="filereaderthread">
+        <memsize>10m</memsize>
+        <operations xsi:type="SBHCO:CreateFile" operationName="createfile1" flowOpName="createfile" warmupOperation="false" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:WriteHoleFile" operationName="wrtfile1" flowOpName="writewholefile" warmupOperation="false" filesetname="" workingset="" fd="1" srcfd="1">
+          <iosize>1m</iosize>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile1" flowOpName="closefile" warmupOperation="false" fd="1"/>
+        <operations xsi:type="SBHCO:OpenFile" operationName="openfile1" flowOpName="openfile" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:AppendFileRand" operationName="appendfilerand1" flowOpName="appendfilerand" fd="1">
+          <iosize>16k</iosize>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile2" flowOpName="closefile" fd="1"/>
+        <operations xsi:type="SBHCO:OpenFile" operationName="openfile2" flowOpName="openfile" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+          <dsync>0</dsync>
+        </operations>
+        <operations xsi:type="SBHCO:ReadWholeFile" operationName="readfile1" flowOpName="readwholefile" fileset="" fd="1">
+          <iosize>1m</iosize>
+          <dsync>0</dsync>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile3" flowOpName="closefile" fd="1"/>
+        <operations xsi:type="SBHCO:DeleteFile" operationName="deletefile1" flowOpName="deletefile" warmupOperation="false" filesetname="bigfileset"/>
+        <operations xsi:type="SBHCO:StatFile" operationName="statfile1" flowOpName="statfile" filesetname="bigfileset"/>
+        <instances>50</instances>
+      </threads>
+      <filesets filesetName="bigfileset">
+        <directory>/bigfileset</directory>
+        <meanDirWidth>20</meanDirWidth>
+        <files>10000</files>
+        <meanFileSize>128k</meanFileSize>
+        <prealloc>80</prealloc>
+      </filesets>
+      <runTime>300</runTime>
+      <warmupTime>60</warmupTime>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfSut" identifier="Filebench(NOOP+ext4)">
+      <fileSystem>ext4</fileSystem>
+      <scheduler>NOOP</scheduler>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariablesOfBlktrace" identifier="blktrace1" bufferSize="999" numberOfBuffers="30" targetDevice="/dev/sda" logFilePrefix="/BlktraceFilebenchFileserver/" patternWindowSize="10" opsWindowSize="10"/>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariablesOfFilesetMonitor" identifier="filesetMonitor1"/>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariablesOfFilesizeMonitor" identifier="FilesizeMonitor1"/>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariablesOfThreadsMonitor" identifier="ThreadsMonitor1" benchmarkPrefix="filebench"/>
+  </independentVariableSpaceRepository>
+</SBHC:Configuration>

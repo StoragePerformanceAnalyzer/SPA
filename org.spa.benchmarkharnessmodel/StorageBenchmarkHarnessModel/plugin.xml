@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="SBHModel.storagebenchmarkharness.sdq.kit.edu"
+            class="edu.kit.sdq.storagebenchmarkharness.SBHModel.SBHModelPackage"
+            genModel="model/SBHModel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu"
+            class="edu.kit.sdq.storagebenchmarkharness.SBHModel.Configuration.ConfigurationPackage"
+            genModel="model/SBHModel.genmodel"/>
+   </extension>
+
+</plugin>

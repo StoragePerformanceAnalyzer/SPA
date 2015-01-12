@@ -1,0 +1,21 @@
+#!/bin/bash
+HERE=$(cd $(dirname ${BASH_SOURCE[0]}) > /dev/null && pwd)
+PROG="${0##*/}"
+cd "$HERE"
+
+java -XX:-UseConcMarkSweepGC -Xms256m -Xmx2048m -XX:MaxPermSize=512m -Dfile.encoding=UTF-8 -classpath bin:\
+libs/eclipse-emf/org.eclipse.emf.ecore_2.7.0.v20110912-0920.jar:\
+libs/eclipse-emf/org.eclipse.emf.ecore.xmi_2.7.0.v20110520-1406.jar:\
+libs/eclipse-emf/org.eclipse.emf.common_2.7.0.v20110912-0920.jar:\
+libs/guava-11.0.1/guava-11.0.1.jar:\
+libs/sqlite4java-213/sqlite4java.jar:\
+libs/logback-0.9.21/logback-classic-0.9.21.jar:\
+libs/logback-0.9.21/logback-core-0.9.21.jar:\
+libs/slf4j-1.6.0/slf4j-api-1.6.0.jar:\
+libs/jsch-0.1.45/dist/lib/jsch-20120123.jar:\
+libs/eclipse-ocl/org.eclipse.ocl.ecore_3.2.0.v20120126-0656.jar:\
+libs/eclipse-ocl/org.eclipse.ocl_3.2.0.v20120130-1105.jar:\
+libs/eclipse-ocl/lpg.runtime.java_2.0.17.v201004271640.jar:\
+libs/JCommander/JCommander.20120328.jar:\
+../StorageBenchmarkHarnessModel/bin \
+edu.kit.sdq.storagebenchmarkharness.ffsb.FFSBImporter "$@"

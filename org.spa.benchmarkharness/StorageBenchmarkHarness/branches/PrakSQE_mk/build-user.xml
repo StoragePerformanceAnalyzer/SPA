@@ -1,0 +1,6 @@
+<?eclipse.ant.import?>
+<project>
+	<presetdef name="javac">
+		<javac includeantruntime="false" />
+	</presetdef>
+</project>

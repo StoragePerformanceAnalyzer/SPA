@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SBHC:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SBHC="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu" xmlns:SBHCO="Operations.Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu">
+  <experimentSetup identifier="Filebench RandWrite" repeatCount="20">
+    <experimentSeries independentVariableSpaceOfBenchmark="FilebenchRandWrite" independentVariableSpaceOfSut="Filebench(NOOP+ext4)" IndependentVariablesOfMonitor="filesetMonitor1 FilesizeMonitor1 ThreadsMonitor1 blktrace1" systemUnderTest="z10" identifier="Filebench RandWrite"/>
+  </experimentSetup>
+  <systemUnderTestRepository>
+    <systemsUnderTest identifier="z10" ip="141.3.52.121" user="abusch" keyFile="/Users/axelbusch/.ssh/id_rsa"/>
+  </systemUnderTestRepository>
+  <independentVariableSpaceRepository>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfFilebench" identifier="FilebenchRandWrite" name="randWrite">
+      <threads threadName="filereaderthread">
+        <memsize>10m</memsize>
+        <operations xsi:type="SBHCO:Write" operationName="write-file" flowOpName="write" filesetname="bigfileset">
+          <iosize>4k</iosize>
+          <directio>1</directio>
+          <random>1</random>
+          <iters>1</iters>
+          <dsync>0</dsync>
+        </operations>
+        <instances>1</instances>
+      </threads>
+      <filesets filesetName="bigfileset">
+        <directory>/bigfileset</directory>
+        <meanDirWidth>1</meanDirWidth>
+        <files>1</files>
+        <meanFileSize>1g</meanFileSize>
+        <prealloc>100</prealloc>
+      </filesets>
+      <runTime>120</runTime>
+      <warmupTime>60</warmupTime>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfSut" identifier="Filebench(NOOP+ext4)">
+      <fileSystem>ext4</fileSystem>
+      <scheduler>NOOP</scheduler>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariablesOfBlktrace" identifier="blktrace1" bufferSize="999" numberOfBuffers="30" targetDevice="/dev/sda" logFilePrefix="/BlktraceFilebenchRandWrite/" patternWindowSize="10" opsWindowSize="10"/>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariablesOfFilesetMonitor" identifier="filesetMonitor1"/>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariablesOfFilesizeMonitor" identifier="FilesizeMonitor1"/>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariablesOfThreadsMonitor" identifier="ThreadsMonitor1" benchmarkPrefix="filebench"/>
+  </independentVariableSpaceRepository>
+</SBHC:Configuration>

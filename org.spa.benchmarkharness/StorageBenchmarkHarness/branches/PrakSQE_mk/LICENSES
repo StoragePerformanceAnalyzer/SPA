@@ -1,0 +1,41 @@
+This software uses the following libraries at runtime:
+
+1. Eclipse Modeling Framework (EMF):
+    - Available at: http://www.eclipse.org/modeling/emf/
+    - Licensed under Eclipse Public License http://www.eclipse.org/legal/epl-v10.html
+    
+2. LALR Parser Generator:
+    - Available included in EMF and at: http://sourceforge.net/projects/lpg/
+    - Licensed under Eclipse Public License http://www.eclipse.org/legal/epl-v10.html
+	
+3. Google Guava:
+    - Available at: http://code.google.com/p/guava-libraries/
+    - Licensed under Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
+    
+4. JCommander:
+    - Available at: http://jcommander.org/
+    - Licensed under Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
+    
+5. JSCH:
+    - Available at: http://www.jcraft.com/jsch/
+    - Licensed under BSD 3 Clause License http://www.jcraft.com/jsch/LICENSE.txt
+    
+6. JUnit:
+    - Available at: http://www.junit.org/
+    - Licensed under Common Public License http://www.junit.org/license
+  
+7. LogBack:
+    - Available at: http://logback.qos.ch/
+    - Licensed under Eclipse Public License http://www.eclipse.org/legal/epl-v10.html
+
+8. SL4J:
+    - Available at: http://www.slf4j.org/
+    - Licensed under MIT License http://www.slf4j.org/license.html
+  
+9. SQLite4Java:
+    - Available at: http://code.google.com/p/sqlite4java/
+    - Licensed under Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
+
+10. SQLite:
+    - Available at: http://sqlite.org/
+    - Licensed under Public Domain http://sqlite.org/copyright.html

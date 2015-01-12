@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ASCII"?>
+<SBHC:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SBHC="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu" xsi:schemaLocation="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu ../StorageBenchmarkHarnessModel/model/SBHModel.ecore#//Configuration">
+  <experimentSetup identifier="Demonstration" repeatCount="5">
+    <experimentSeries independentVariableSpaceOfBenchmark="Demo_FFSB_Vars" independentVariableSpaceOfSut="Demo_SUT_Vars_(EXT4+NOOP)" systemUnderTest="Demo_Host" identifier="Demo on Host1"/>
+  </experimentSetup>
+  <systemUnderTestRepository>
+    <systemsUnderTest identifier="Demo_Host" ip="10.211.55.9" user="axel" keyFile="/home/axel/.ssh/id_rsa_da"/>
+  </systemUnderTestRepository>
+  <independentVariableSpaceRepository>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfSut" identifier="Demo_SUT_Vars_(EXT4+NOOP)">
+      <fileSystem>ext4</fileSystem>
+      <scheduler>NOOP</scheduler>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfFFSB" identifier="Demo_FFSB_Vars">
+      <blockSize>20480</blockSize>
+      <readPercentage>0</readPercentage>
+      <readPercentage>25</readPercentage>
+      <readPercentage>40</readPercentage>
+      <readPercentage>50</readPercentage>
+      <readPercentage>60</readPercentage>
+      <readPercentage>75</readPercentage>
+      <readPercentage>100</readPercentage>
+      <filesetSize>1024</filesetSize>
+      <filesetSize>25600</filesetSize>
+      <filesetSize>51200</filesetSize>
+      <filesetSize>76800</filesetSize>
+      <filesetSize>102400</filesetSize>
+      <sequentialAccess>true</sequentialAccess>
+      <sequentialAccess>false</sequentialAccess>
+      <writeFsync>false</writeFsync>
+      <threadCount>100</threadCount>
+      <runTime>60</runTime>
+      <warmUpTime>60</warmUpTime>
+      <fileSize>16384</fileSize>
+      <opsPerFile>256</opsPerFile>
+      <directIO>true</directIO>
+    </independentVariableSpaces>
+  </independentVariableSpaceRepository>
+</SBHC:Configuration>

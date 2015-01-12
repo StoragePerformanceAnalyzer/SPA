@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SBHC:Configuration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SBHC="Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu" xmlns:SBHCO="Operations.Configuration.SBHModel.storagebenchmarkharness.sdq.kit.edu">
+  <experimentSetup identifier="Example_Mailserver_on_one_host">
+    <experimentSeries independentVariableSpaceOfBenchmark="FilebenchWebserver" independentVariableSpaceOfSut="NOOP+ext4" systemUnderTest="SUT_example" identifier="FB_run"/>
+  </experimentSetup>
+  <systemUnderTestRepository>
+    <systemsUnderTest identifier="SUT_example" ip="IP.IP.IP.IP" port="0" user="username" keyFile="/Path/RSA_KEY_FILE"/>
+  </systemUnderTestRepository>
+  <independentVariableSpaceRepository>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfSut" identifier="NOOP+ext4">
+      <fileSystem>ext4</fileSystem>
+      <scheduler>NOOP</scheduler>
+    </independentVariableSpaces>
+    <independentVariableSpaces xsi:type="SBHC:IndependentVariableSpaceOfFilebench" identifier="FilebenchWebserver" name="webserver">
+      <threads threadName="filereaderthread">
+        <memsize>10m</memsize>
+        <operations xsi:type="SBHCO:OpenFile" operationName="openfile1" flowOpName="openfile" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+          <dsync>0</dsync>
+        </operations>
+        <operations xsi:type="SBHCO:ReadWholeFile" operationName="readfile1" flowOpName="readwholefile" fileset="" fd="1">
+          <iosize>1m</iosize>
+          <dsync>0</dsync>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile1" flowOpName="closefile" fd="1"/>
+        <operations xsi:type="SBHCO:OpenFile" operationName="openfile2" flowOpName="openfile" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+          <dsync>0</dsync>
+        </operations>
+        <operations xsi:type="SBHCO:ReadWholeFile" operationName="readfile2" flowOpName="readwholefile" fileset="" fd="1">
+          <iosize>1m</iosize>
+          <dsync>0</dsync>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile2" flowOpName="closefile" fd="1"/>
+        <operations xsi:type="SBHCO:OpenFile" operationName="openfile3" flowOpName="openfile" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+          <dsync>0</dsync>
+        </operations>
+        <operations xsi:type="SBHCO:ReadWholeFile" operationName="readfile3" flowOpName="readwholefile" fileset="" fd="1">
+          <iosize>1m</iosize>
+          <dsync>0</dsync>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile3" flowOpName="closefile" fd="1"/>
+        <operations xsi:type="SBHCO:OpenFile" operationName="openfile4" flowOpName="openfile" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+          <dsync>0</dsync>
+        </operations>
+        <operations xsi:type="SBHCO:ReadWholeFile" operationName="readfile4" flowOpName="readwholefile" fileset="" fd="1">
+          <iosize>1m</iosize>
+          <dsync>0</dsync>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile4" flowOpName="closefile" fd="1"/>
+        <operations xsi:type="SBHCO:OpenFile" operationName="openfile5" flowOpName="openfile" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+          <dsync>0</dsync>
+        </operations>
+        <operations xsi:type="SBHCO:ReadWholeFile" operationName="readfile5" flowOpName="readwholefile" fileset="" fd="1">
+          <iosize>1m</iosize>
+          <dsync>0</dsync>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile5" flowOpName="closefile" fd="1"/>
+        <operations xsi:type="SBHCO:OpenFile" operationName="openfile6" flowOpName="openfile" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+          <dsync>0</dsync>
+        </operations>
+        <operations xsi:type="SBHCO:ReadWholeFile" operationName="readfile6" flowOpName="readwholefile" fileset="" fd="1">
+          <iosize>1m</iosize>
+          <dsync>0</dsync>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile6" flowOpName="closefile" fd="1"/>
+        <operations xsi:type="SBHCO:OpenFile" operationName="openfile7" flowOpName="openfile" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+          <dsync>0</dsync>
+        </operations>
+        <operations xsi:type="SBHCO:ReadWholeFile" operationName="readfile7" flowOpName="readwholefile" fileset="" fd="1">
+          <iosize>1m</iosize>
+          <dsync>0</dsync>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile7" flowOpName="closefile" fd="1"/>
+        <operations xsi:type="SBHCO:OpenFile" operationName="openfile8" flowOpName="openfile" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+          <dsync>0</dsync>
+        </operations>
+        <operations xsi:type="SBHCO:ReadWholeFile" operationName="readfile8" flowOpName="readwholefile" fileset="" fd="1">
+          <iosize>1m</iosize>
+          <dsync>0</dsync>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile8" flowOpName="closefile" fd="1"/>
+        <operations xsi:type="SBHCO:OpenFile" operationName="openfile9" flowOpName="openfile" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+          <dsync>0</dsync>
+        </operations>
+        <operations xsi:type="SBHCO:ReadWholeFile" operationName="readfile9" flowOpName="readwholefile" fileset="" fd="1">
+          <iosize>1m</iosize>
+          <dsync>0</dsync>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile9" flowOpName="closefile" fd="1"/>
+        <operations xsi:type="SBHCO:OpenFile" operationName="openfile10" flowOpName="openfile" filesetname="bigfileset" fd="1">
+          <directio>1</directio>
+          <dsync>0</dsync>
+        </operations>
+        <operations xsi:type="SBHCO:ReadWholeFile" operationName="readfile10" flowOpName="readwholefile" fileset="" fd="1">
+          <iosize>1m</iosize>
+          <dsync>0</dsync>
+          <directio>1</directio>
+        </operations>
+        <operations xsi:type="SBHCO:CloseFile" operationName="closefile10" flowOpName="closefile" fd="1"/>
+        <operations xsi:type="SBHCO:AppendFileRand" operationName="appendlog" flowOpName="appendfilerand" filesetname="logfiles" fd="2">
+          <iosize>16k</iosize>
+          <directio>1</directio>
+        </operations>
+        <instances>5</instances>
+      </threads>
+      <filesets filesetName="bigfileset">
+        <directory>/bigfileset</directory>
+        <meanDirWidth>20</meanDirWidth>
+        <files>1000</files>
+        <meanFileSize>16k</meanFileSize>
+        <prealloc>100</prealloc>
+      </filesets>
+      <filesets filesetName="logfiles">
+        <directory>/logfiles</directory>
+        <meanDirWidth>20</meanDirWidth>
+        <files>1</files>
+        <meanFileSize>16k</meanFileSize>
+        <prealloc>100</prealloc>
+      </filesets>
+      <runTime>300</runTime>
+      <warmupTime>60</warmupTime>
+    </independentVariableSpaces>
+  </independentVariableSpaceRepository>
+</SBHC:Configuration>

@@ -1,0 +1,162 @@
+title Remote Benchmark Controller (RBC) - synchronized
+
+
+_ -> RBC: create()
+activate RBC
+
+RBC -> RemoteConnection1: create()
+activate RemoteConnection1
+RemoteConnection1 --> RBC: 
+deactivate RemoteConnection1
+
+RBC -> Benchmark1: create()
+activate Benchmark1
+Benchmark1 --> RBC: 
+deactivate Benchmark1
+
+RBC -> RemoteConnection2: create()
+activate RemoteConnection2
+RemoteConnection2 --> RBC: 
+deactivate RemoteConnection2
+
+RBC -> Benchmark2: create()
+activate Benchmark2
+Benchmark2 --> RBC: 
+deactivate Benchmark2
+
+RBC --> _:
+deactivate RBC
+
+_ -> RBC: run()
+activate RBC
+
+RBC -> DataStore: setupDataStore()
+activate DataStore
+DataStore --> RBC: 
+deactivate DataStore
+
+RBC -> RemoteConnection1: open()
+activate RemoteConnection1
+RemoteConnection1 --> RBC: 
+deactivate RemoteConnection1
+
+
+RBC -> RemoteConnection2: open()
+activate RemoteConnection2
+RemoteConnection2 --> RBC: 
+deactivate RemoteConnection2
+
+RBC -> DataStore: storeConfigurationRun()
+activate DataStore
+DataStore --> RBC: 
+deactivate DataStore
+
+
+loop For each experiment
+     RBC -> Benchmark1: setupExperiment()
+    activate Benchmark1
+
+    Benchmark1 -> RemoteConnection1: saveToFile()
+    activate RemoteConnection1
+    RemoteConnection1 --> Benchmark1:
+    deactivate RemoteConnection1
+
+    Benchmark1 --> RBC: 
+    deactivate Benchmark1
+
+    RBC -> Benchmark2: setupExperiment()
+    activate Benchmark2
+
+    Benchmark2 -> RemoteConnection2: saveToFile()
+    activate RemoteConnection2
+    RemoteConnection2 --> Benchmark2:
+    deactivate RemoteConnection2
+
+    Benchmark2 --> RBC: 
+    deactivate Benchmark2
+
+
+    note over Benchmark1,Benchmark2: vvvv |Parallel & Synchronized Execution| vvvv
+
+    RBC -> Benchmark1: runExperiment()
+    activate Benchmark1
+
+    RBC -> Benchmark2: runExperiment()
+    activate Benchmark2
+
+    Benchmark1 -> RemoteConnection1: execute()
+    activate RemoteConnection1
+    RemoteConnection1 --> Benchmark1:
+    deactivate RemoteConnection1
+
+    Benchmark2 -> RemoteConnection2: execute()
+    activate RemoteConnection2
+    RemoteConnection2 --> Benchmark2:
+    deactivate RemoteConnection2
+
+    Benchmark2 -> RBC:
+    deactivate Benchmark2
+
+    Benchmark1 -> RBC:
+    deactivate Benchmark1
+
+
+   note over Benchmark1,Benchmark2: ^^^^^ |Parallel & Synchronized Execution| ^^^^^
+
+
+    RBC -> Benchmark1: finishExperiment()
+    activate Benchmark1
+   Benchmark1 -> RemoteConnection1: deleteFile()
+    activate RemoteConnection1
+    RemoteConnection1 --> Benchmark1:
+    deactivate RemoteConnection1
+    Benchmark1 --> RBC: 
+    deactivate Benchmark1
+
+    RBC -> Benchmark2: finishExperiment()
+    activate Benchmark2
+    Benchmark2 -> RemoteConnection2: deleteFile()
+    activate RemoteConnection2
+    RemoteConnection2 --> Benchmark2:
+    deactivate RemoteConnection2
+    Benchmark2 --> RBC: 
+    deactivate Benchmark2
+
+    RBC -> DataStore: storeExperimentRun()
+    activate DataStore
+    DataStore --> RBC: 
+    deactivate DataStore 
+
+    RBC -> DataStore: storeHostExperimentResult()
+    activate DataStore
+    DataStore --> RBC: 
+    deactivate DataStore
+end
+
+
+RBC -> DataStore: finishConfigurationRun()
+activate DataStore
+DataStore --> RBC: 
+deactivate DataStore
+
+
+RBC -> RemoteConnection1: close()
+activate RemoteConnection1
+RemoteConnection1 --> RBC: 
+deactivate RemoteConnection1
+
+
+RBC -> RemoteConnection2: close()
+activate RemoteConnection2
+RemoteConnection2 --> RBC: 
+deactivate RemoteConnection2
+
+
+RBC -> DataStore: closeDataStore()
+activate DataStore
+DataStore --> RBC: 
+deactivate DataStore
+
+
+RBC --> _:
+deactivate RBC
