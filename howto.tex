@@ -1,0 +1,110 @@
+\documentclass{thisclass}
+
+%% -------------------------------
+%% |  Information for PDF file   |
+%% -------------------------------
+\hypersetup{
+ pdfauthor={Qais Noorshams},
+ pdftitle={Storage Performance Analyzer (SPA)},
+ pdfsubject={Software Documentation},
+ pdfkeywords={Benchmarking, Java, R, Storage}
+}
+
+
+%% -------------------------------
+%% | Information about the work  |
+%% -------------------------------
+
+\newcommand{\mycontributors}{SPA Development Team}
+\newcommand{\mytitle}{Storage Performance Analyzer (SPA)}
+\newcommand{\mysubtitle}{Software Documentation}
+
+\newcommand{\myversion}{1.0.1}
+
+%% -------------------------------
+%% |            Q&A              |
+%% -------------------------------
+\newcounter{question}
+\setcounter{question}{0}
+
+\newcommand\Que[1]{%
+\leavevmode\par%
+\stepcounter{question}%
+\noindent%
+\textbf{Q\thequestion} --- #1}
+
+\newcommand\Ans[1]{%
+\leavevmode\par\noindent%
+{\leftskip37pt%
+\textbf{A} --- #1\par}}
+
+
+%% -------------------------------
+%% |   Marker - only for draft!  |
+%% -------------------------------
+% Remove this section for final version!
+\setlength{\marginparwidth}{20mm}
+
+\newcommand{\margtodo}
+{\marginpar{\textbf{\textcolor{red}{ToDo}}}{}}
+
+\newcommand{\todo}[1]
+{{\textbf{\textcolor{red}{(\margtodo{}#1)}}}{}}
+
+\newenvironment{deprecated}
+{\begin{color}{gray}}
+{\end{color}}
+
+% Show overfull lines visually
+%\overfullrule=10pt
+
+%% --------------------------------
+%% |          Glossary            |
+%% --------------------------------
+
+\input{glossary.tex}
+\makeglossaries
+
+\overfullrule=20pt
+
+\usepackage{microtype}
+
+ \lstset{
+          basicstyle=\footnotesize\ttfamily, % Standardschrift
+          breaklines=true,            % Zeilen werden Umgebrochen
+          keywordstyle=\color{gray!120},
+  }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Here, main documents begins %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Remove the following line for German text
+\selectlanguage{english}
+
+%% -------------------
+%% |  Title and TOC  |
+%% -------------------
+\input{titlepage}
+\tableofcontents
+
+
+%% -----------------
+%% |   Main part   |
+%% -----------------
+\input{maintext}
+
+%% --------------------
+%% |   Bibliography   |
+%% --------------------
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\bibname}
+
+% Use IEEEtran for numeric references
+\bibliographystyle{IEEEtranSA}
+\bibliography{bibliography}
+
+\end{document}

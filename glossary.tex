@@ -1,0 +1,78 @@
+\newglossaryentry{benchmark harness} {
+  name={benchmark harness},
+  description={consists of multiple components which help to plan and control the execution of
+benchmarks on multiple hosts, gather the results and store them for further
+analysis.}
+}
+
+\newglossaryentry{benchmark} {
+  name={benchmark},
+  description={is a piece of software which runs on the system under test. It
+produces load on the system and captures results of given metrics.}
+}
+
+\newglossaryentry{benchmark driver} {
+  name={benchmark driver},
+  description={is the interface between the \gls{benchmark controller} and
+the \gls{benchmark}. It launches a given benchmark, captures the output and
+extracts the results from the output.}
+}
+
+\newglossaryentry{benchmark controller} {
+  name={benchmark controller},
+  description={uses the \glspl{benchmark driver} to coordinate the execution of 
+\glspl{benchmark} on the \glspl{system under test}.}
+}
+
+\newglossaryentry{system under test} {
+  name={system under test},
+  plural={systems under test},
+  description={is the actual host or machine for which the benchmark results should
+be generated.}
+}
+
+\newglossaryentry{independent variable} {
+  name={independent variable},
+  description={is also called an explanatory variable or input variable. It is a
+variable whose values are set prior to the run of a benchmark. It includes all
+factors which can possibly change the outcome of a benchmark.}
+}
+
+\newglossaryentry{dependent variable} {
+  name={dependent variable},
+  description={is a variable, whose values are generated during the run of a
+benchmark. The values are dependent on the values of the \glspl{independent
+variable}.}
+}
+
+\newglossaryentry{independent variable space} {
+ name={independent variable space},
+ description={is a set of independent variables and one or more values for each of
+the variables.}
+}
+
+\newglossaryentry{experiment} {
+  name={experiment},
+  description={is a specification of one benchmark run defined by a value for
+each of the \glspl{independent variable} needed and a \gls{system under test}
+where the benchmark run should be executed on.}
+}
+
+\newglossaryentry{experiment series} {
+ name={experiment series},
+ plural={experiment series},
+ description={is a term used in singular form for a set of experiments on a
+system under test. The experiments are defined by a \gls{independent variable
+space}.}
+}
+
+\newglossaryentry{experiment setup} {
+  name={experiment setup},
+  description={defines the overall experiment configuration. It contains an
+\gls{experiment series} for each system under test which will be involved.}
+ }
+ 
+ \newglossaryentry{benchmark run} {
+ name={benchmark run},
+ description={A single execution of a \gls{benchmark} on one \gls{system under test}.}
+ }

@@ -1,0 +1,22 @@
+%% titlepage.tex
+%%
+
+\begin{titlepage}
+	\begin{textblock}{10}[0,0](13,2.5)
+		\includegraphics[width=.3\textwidth]{logos/SPA_Logo.pdf}
+	\end{textblock}
+	\changefont{phv}{m}{n}	% helvetica	
+	\vspace*{7.5cm}
+	\begin{center}
+		\Huge{\mytitle}\\
+		\vspace*{1.5cm}
+		\huge{\mysubtitle}\\
+		\huge{Version: \myversion}
+	\end{center}
+	\vspace{\fill}
+	\begin{center}
+		\large{\mycontributors}\\
+		\vspace{2cm}
+		\footnotesize{Documentation Build Time: \today{} at \currenttime{}}
+	\end{center}
+\end{titlepage}
