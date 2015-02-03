@@ -9,4 +9,4 @@ You can download <a href="https://github.com/StoragePerformanceAnalyzer/SPA/rele
 
 
 For further description visit the <a href="http://storageperformanceanalyzer.github.io/SPA" target="_blank">SPA website</a>. 
-Prepared drops  
+ 
